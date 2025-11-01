@@ -1,20 +1,8 @@
-body {
-    font-family: "Arial", sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    text-align: center;
-}
-
 .search-form {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .search-form input {
@@ -34,62 +22,49 @@ body {
     cursor: pointer;
 }
 
-.search-form button:hover {
-    background: #3c68d3;
-}
-
+/* GALERİ GRID DÜZENİ */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
+/* GÖRSEL KART */
 .gallery-item {
-    background: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    background-color: #fff;
+    transition: transform 0.25s ease;
 }
 
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+/* GÖRSELLER */
 .gallery-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
+/* ALT BİLGİ KISMI */
 .info {
     display: flex;
     justify-content: space-around;
-    font-size: 14px;
+    flex-wrap: wrap;
     padding: 10px;
+    font-size: 14px;
+    color: #333;
 }
 
-/* Loader */
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #4e7df2;
-    border-radius: 50%;
-    animation: lds-ring 1.2s linear infinite;
-    border-color: #4e7df2 transparent transparent transparent;
+.info p {
+    margin: 5px 0;
 }
 
 .load-more {
